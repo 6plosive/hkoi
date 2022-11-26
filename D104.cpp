@@ -15,7 +15,8 @@ void D104(){
 	ans2=(-b-mod)/2/a;
 	cout<<fixed;
 	cout<<setprecision(3);//<<ans1<<' '<<ans2<<endl;
-	if(ans1<ans2) cout<<ans1<<' '<<ans2<<endl;
+	if(ans1==ans2) cout<<ans1<<endl;
+	else if(ans1<ans2) cout<<ans1<<' '<<ans2<<endl;
 	else cout<<ans2<<' '<<ans1<<endl;
 }
 
