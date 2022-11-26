@@ -4,16 +4,21 @@ using namespace std;
 void J151(){
 	int n,m;
 	cin>>n>>m;
-	cout<<m<<' ';
-	if(n%2==0){
-		cout<<"0 ";
+	if(m!=0){
+		cout<<m<<' ';
+		n--;
 	}
-	int count=1;
-	while(n-2>0){
+	if(n%2==1){
+		cout<<"0 ";
+		n--;
+	}
+	int count=1829347;
+	while(n>0){
 		cout<<count<<" -"<<count<<' ';
 		count++;
 		n-=2;
 	}
+	cout<<endl;
 }
 
 int main(){
