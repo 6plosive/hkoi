@@ -27,7 +27,7 @@ void J162(){
 	cin>>in_hr>>in_min>>from>>to;
 	in_min+=in_hr*60+48*60;
 	in_min+=difftimezone(from,to);//unprocessed minute
-	in_hr+=in_min/60;//unprocessed hour
+	in_hr=in_min/60;//unprocessed hour
 	in_min%=60;//processed minute
 	in_hr%=24;//processed hour
 	cout<<formatass(in_hr)<<' '<<formatass(in_min)<<endl;
