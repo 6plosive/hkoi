@@ -28,14 +28,15 @@ int main(){
 		if(lol(list,i,y)){
 			find.push_back(make_pair(list[i].first+x,list[i].second));
 		}
-		if(find.front()==list[i]){
+		if(!find.empty()) while(list[i].first>find.front().first) find.erase(find.begin());
+		if(find.front().first==list[i].first){
 			for(int j=i;j<list.size();j++){
 				if(list[i].first==list[j].first){
 					if(list[i].second+y==list[j].second){
 						count++;
 						find.erase(find.begin());
 						break;
-					}else if(list[i].second+y>list[j].second) break;
+					}else if(list[i].second+y<list[j].second) break;
 				}else break;
 			}
 		}
